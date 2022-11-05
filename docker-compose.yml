@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  frontend:
+    image: afeez511/hng-frontend:react 
+    ports:
+      - 3000:3000
+
+    restart: always
+
+  api:
+    image: afeez511/hng-backend:django
+    ports:
+      - 8000:8000
+   # command: python manage.py runserver 0.0.0.0:8000
+    restart: always
